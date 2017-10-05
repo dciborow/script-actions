@@ -2,6 +2,7 @@
 
 newspark="spark-2.2.0-bin-hadoop2.7"
 http://home.apache.org/~pwendell/spark-releases/spark-2.2.0-rc4-bin/spark-2.2.0-bin-hadoop2.7.tgz
+https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
 
 SPARK_DIR="$(readlink -f "/usr/hdp/current/spark2-client")"
 SPARK_CONF_DIR="$(readlink -f "/usr/hdp/current/spark2-client/conf")"
@@ -11,7 +12,7 @@ HADOOP_YARN_DIR="$CURRENT_DIR/hadoop-yarn"
 
 ## Download & Install Binary
 cd "/tmp"
-curl "http://home.apache.org/~pwendell/spark-releases/spark-2.2.0-rc4-bin/$newspark.tgz" | tar xzf -
+curl "https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz" | tar xzf -
 cd "$newspark"
 rm -r "jars/hadoop"* "conf"
 ln -s "$SPARK_CONF_DIR" "conf"
